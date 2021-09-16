@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/chandni-product/product" method="POST">
+		<service class="Chandni\Product\Api\ProductRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Chandni_Product::Product_save"/>
+		</resources>
+	</route>
+	<route url="/V1/chandni-product/product/search" method="GET">
+		<service class="Chandni\Product\Api\ProductRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Chandni_Product::Product_view"/>
+		</resources>
+	</route>
+	<route url="/V1/chandni-product/product/:entityId" method="GET">
+		<service class="Chandni\Product\Api\ProductRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Chandni_Product::Product_view"/>
+		</resources>
+	</route>
+	<route url="/V1/chandni-product/product/:entityId" method="PUT">
+		<service class="Chandni\Product\Api\ProductRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Chandni_Product::Product_update"/>
+		</resources>
+	</route>
+	<route url="/V1/chandni-product/product/:entityId" method="DELETE">
+		<service class="Chandni\Product\Api\ProductRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Chandni_Product::Product_delete"/>
+		</resources>
+	</route>
+</routes>

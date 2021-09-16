@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="chandni_product_product" resource="default" engine="innodb" comment="chandni_product_product Table">
+		<column xsi:type="smallint" name="entity_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<column xsi:type="varchar" name="sku" nullable="true" length="64" comment="SKU"/>
+        <column xsi:type="varchar" name="vendor_number" nullable="true" length="32" comment="Vendor Number" />
+        <column xsi:type="varchar" name="vendor_note" nullable="true" length="32" comment="Vendor Note" />
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Update Time"/>
+        <constraint xsi:type="foreign" referenceId="CHANDNI_PRODUCT_PRODUCT_SKU_CATALOG_PRODUCT_ENTITY" table="chandni_product_product" column="sku" referenceTable="catalog_product_entity" referenceColumn="sku" onDelete="CASCADE"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="entity_id"/>
+		</constraint>
+	</table>
+</schema>

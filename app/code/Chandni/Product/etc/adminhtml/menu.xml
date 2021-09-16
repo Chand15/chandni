@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Chandni::top_level" title="Chandni" module="Chandni_Product" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Chandni_Product::chandni_product_product" title="Product" module="Chandni_Product" sortOrder="9999" resource="Magento_Backend::content" parent="Chandni::top_level" action="chandni_product/product/index"/>
+	</menu>
+</config>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/system_file.xsd">
+    <system>
+        <tab id="chandni" translate="label" sortOrder="1">
+            <label>Vendor</label>
+        </tab>
+        <section id="chandniproduct" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <!-- <class>separator-top</class> -->
+            <label>Module</label>
+            <tab>chandni</tab>
+            <resource>Chandni_Product::system_config</resource>
+            <group id="chandni_general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="product_disclaimer" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product Disclaimer</label>
+                </field>
+            </group>
+        </section>
+        <!-- ./porto setting - static block show before copyright block section end-->
+    </system>
+</config>
